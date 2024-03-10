@@ -25,10 +25,10 @@
 let x = new Number(5);
 console.log(typeof x);
 
-
+// JavaScript Objects - Quiz 11
 function sayHi() {
-    console.log(name);
-    console.log(age);
+    console.log(name); // undefined
+    console.log(age); // Uncaught ReferenceError: Cannot access 'age' before initialization
     var name = "JavaScript";
     let age = 21;
 }
