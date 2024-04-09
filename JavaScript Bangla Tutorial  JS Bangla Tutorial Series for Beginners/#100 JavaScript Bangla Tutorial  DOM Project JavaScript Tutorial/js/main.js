@@ -68,11 +68,6 @@ milestoneImage.onload = function () {
 };
 
 function markMileStone(checkbox, id) {
-    // const doneList = document.querySelector(".doneList");
-    // const milestonesList = document.querySelector(".milestones");
-    // console.log(milestonesList);
-    // const item = document.getElementById(id);
-
     const doneList = document.querySelector(".doneList");
     const milestonesList = document.querySelector(".milestones");
     const item = document.getElementById(id);
@@ -83,12 +78,22 @@ function markMileStone(checkbox, id) {
         doneList.appendChild(item);
     } else {
         // back to main list
-        milestonesList.appendChild(item);
         doneList.removeChild(item);
-    }
+        milestonesList.appendChild(item);
+        // task - do the sorting
+        // reload list
 
-    // task - do the sorting
-    // reload list
+        // console.dir(item.id);
+        const modules = milestonesList.childNodes;
+        // console.log(modules);
+        let modulesArray = [];
+        for (const iterator of modules) {
+            modulesArray.push(iterator);
+        }
+        const sortedModules = modulesArray.toSorted(function (a, b) { return a.id - b.id })
+        // console.log(sortedModules);
+        sortedModules.map(sortedmodule => milestonesList.appendChild(sortedmodule));
+    }
 }
 
 loadMilestones();
