@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build": "tailwindcss -i ./src/tailwind.css -o ./output/tailwind.css -w",
     "build-p": "npx postcss ./src/input.css -o ./src/output.css --watch"
   },
   "devDependencies": {
