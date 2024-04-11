@@ -7,3 +7,9 @@
         transform: rotate(0deg);
     }
 }
+
+@screen sm {
+    .bg-gradient-brand {
+        background-image: linear-gradient(blue, green);
+    }
+}
