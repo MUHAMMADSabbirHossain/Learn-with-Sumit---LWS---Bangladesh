@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities; */
 
-@variants hover, focus {
+/* @variants hover, focus {
     .rotate-0 {
         transform: rotate(0deg);
     }
@@ -12,4 +12,12 @@
     .bg-gradient-brand {
         background-image: linear-gradient(blue, green);
     }
+} */
+
+.text-body {
+    font-size: 2rem;
+}
+
+input::placeholder {
+    color: gray;
 }
