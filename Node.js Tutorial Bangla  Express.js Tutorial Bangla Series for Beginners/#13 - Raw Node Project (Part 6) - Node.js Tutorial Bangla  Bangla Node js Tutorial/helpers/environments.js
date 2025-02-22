@@ -7,9 +7,19 @@
  */
 
 // dependencies
+require('dotenv').config();
 
 // module scaffolding
 const environments = {};
+
+// twilio: {
+//     fromPhone: `${process.env.TWILIO_fromPhone}`,
+//     accountSid: `${process.env.TWILIO_fromPhone}`,
+//     authToken: `${process.env.TWILIO_authToken}`,
+// }
+// console.log(process.env.TWILIO_fromPhone);
+// console.log(`${process.env.TWILIO_fromPhone}`);
+
 
 // staging environment
 environments.staging = {
