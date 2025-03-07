@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "SET NODE_ENV=staging&&nodemon index",
+    "production": "SET NODE_ENV=production&&nodemon index"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
