@@ -17,6 +17,34 @@ router.get(`/`, async function (req, res) {
     }
 });
 
+// get active todos
+router.get(`/active`, async function (req, res) {
+    const todo = new Todo();
+    const data = await todo.findActive();
+
+    res.status(200).send({ custom: `todos fetched successfully`, ...data });
+});
+
+// get active todos with callback
+router.get(`/active-callback`, function (req, res) {
+    const todo = new Todo();
+    todo.findActiveCallback(function (error, data) {
+        res.status(200).json({ data });
+    });
+});
+
+router.get(`/js`, async function (req, res) {
+    const data = await Todo.findByJS();
+
+    res.status(200).send({ custom: `todos fetched successfully`, ...data });
+});
+
+router.get(`/language`, async function (req, res) {
+    const data = await Todo.find().byLanguage(`react`);
+
+    res.status(200).send({ custom: `todos fetched successfully`, ...data });
+});
+
 router.get(`/:id`, async function (req, res) {
     const id = req.params.id;
     try {
