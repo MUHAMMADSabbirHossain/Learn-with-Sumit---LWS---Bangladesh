@@ -7,13 +7,15 @@ const decorateHtmlResponse = require('../middlewares/common/decorateHtmlResponse
 const { getUsers, addUser, removeUser } = require('../controller/usersController');
 const avatarUpload = require('../middlewares/users/avatarUpload');
 const { addUserValidators, addUserValidationHandler } = require('../middlewares/users/userValidator');
+const { checkLogin } = require('../middlewares/common/checkLogin');
 
 // users page
-router.get('/', decorateHtmlResponse('users'), getUsers);
+router.get('/', decorateHtmlResponse('users'), checkLogin, getUsers);
 
 // add user
 router.post(
     '/',
+    checkLogin,
     avatarUpload,
     addUserValidators,
     addUserValidationHandler,
