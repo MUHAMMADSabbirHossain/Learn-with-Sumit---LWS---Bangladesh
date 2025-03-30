@@ -1,10 +1,11 @@
-const uploader = require("../../utilities/singleUploader");
+const uploader = require("../../utilities/multipleUploader");
 
-function avatarUpload(req, res, next) {
+function attachmentUpload(req, res, next) {
   const upload = uploader(
-    "avatars",
+    "attachments",
     ["image/jpeg", "image/jpg", "image/png"],
     1000000,
+    2,
     "Only .jpg, jpeg or .png format allowed!"
   );
 
@@ -24,4 +25,4 @@ function avatarUpload(req, res, next) {
   });
 }
 
-module.exports = avatarUpload;
+module.exports = attachmentUpload;

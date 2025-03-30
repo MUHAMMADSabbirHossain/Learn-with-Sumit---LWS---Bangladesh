@@ -1,28 +1,29 @@
-// external modules
-const createError = require('http-errors');
+const createError = require("http-errors");
 
+// 404 not found handler
 function notFoundHandler(req, res, next) {
-    next(createError(404, 'Your requested content was not found!'));
+  next(createError(404, "Your requested content was not found!"));
 }
 
-function errorHandler(error, req, res, next) {
-    res.status(error.status || 500);
+// default error handler
+function errorHandler(err, req, res, next) {
+  res.locals.error =
+    process.env.NODE_ENV === "development" ? err : { message: err.message };
 
-    res.locals.error = process.env.NODE_ENV === 'development' ? error : { message: error.message };
-    // console.log(res.locals.error);
+  res.status(err.status || 500);
 
-    if (res.locals.html) {
-        res.render('error', {
-            title: 'Error Page'
-        });
-    } else {
-        res.json({
-            message: res.locals.error,
-        });
-    }
+  if (res.locals.html) {
+    // html response
+    res.render("error", {
+      title: "Error page",
+    });
+  } else {
+    // json response
+    res.json(res.locals.error);
+  }
 }
 
 module.exports = {
-    notFoundHandler,
-    errorHandler
-}
+  notFoundHandler,
+  errorHandler,
+};
