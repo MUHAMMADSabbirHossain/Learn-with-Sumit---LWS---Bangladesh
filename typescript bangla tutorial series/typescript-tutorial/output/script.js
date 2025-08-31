@@ -130,4 +130,24 @@ calculation = (a, b, c) => {
   else return 0;
 };
 calculation(5, 6, "minus"); */
+class Player {
+    name;
+    age;
+    country;
+    constructor(n, a, c) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing`);
+    }
+}
+const mashrafi = new Player("Mashrafi", 35, "Bangladesh");
+mashrafi.play();
+const sakib = new Player("Sakib", 35, "Bangladesh");
+sakib.play();
+const players = [];
+players.push(mashrafi, sakib);
+console.log(players);
 //# sourceMappingURL=script.js.map
