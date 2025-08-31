@@ -53,3 +53,35 @@ person.name = "Sumit";
 person.age = "5"; // Type 'string' is not assignable to type 'number'.
 person.isCaptain = true;
 person.country = "Bangladesh"; // Property 'country' does not exist on type '{ name: string; age: number; isCaptain: boolean; getName: () => string; } */
+
+/* let a: string;
+let b: number | boolean;
+
+a = "string";
+b = 34;
+b = true;
+
+let array: (string | number | boolean | object)[] = [
+  "string",
+  34,
+  true,
+  { name: "apple" },
+  [1, 2, 3],
+];
+
+let c: {
+  name: string;
+  age: number;
+  isCaptain: boolean;
+  getName: () => null | number | string;
+};
+
+c = {
+  name: "Sumit",
+  age: 35,
+  isCaptain: true,
+  getName: function () {
+    return 34;
+  },
+};
+ */
