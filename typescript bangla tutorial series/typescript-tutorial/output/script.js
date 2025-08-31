@@ -132,7 +132,7 @@ calculation = (a, b, c) => {
 calculation(5, 6, "minus"); */
 class Player {
     name;
-    age;
+    age; // Default public
     country;
     constructor(n, a, c) {
         this.name = n;
@@ -150,4 +150,7 @@ sakib.play();
 const players = [];
 players.push(mashrafi, sakib);
 console.log(players);
+// sakib.name = "Mashrafi"; // Should not do it. privite keyword helps to protect the data.
+// console.log(sakib.name);
+// console.log(sakib.country);
 //# sourceMappingURL=script.js.map

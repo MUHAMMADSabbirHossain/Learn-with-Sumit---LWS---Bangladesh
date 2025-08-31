@@ -140,9 +140,9 @@ calculation = (a, b, c) => {
 calculation(5, 6, "minus"); */
 
 class Player {
-  name: string;
-  age: number;
-  country: string;
+  private name: string;
+  public age: number; // Default public
+  readonly country: string;
 
   constructor(n: string, a: number, c: string) {
     this.name = n;
@@ -163,3 +163,7 @@ sakib.play();
 const players: Player[] = [];
 players.push(mashrafi, sakib);
 console.log(players);
+
+// sakib.name = "Mashrafi"; // Should not do it. privite keyword helps to protect the data.
+// console.log(sakib.name);
+// console.log(sakib.country);
