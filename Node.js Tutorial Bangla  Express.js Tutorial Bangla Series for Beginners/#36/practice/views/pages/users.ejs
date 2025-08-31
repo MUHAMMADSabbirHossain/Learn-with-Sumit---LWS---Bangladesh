@@ -1,0 +1,47 @@
+<%- include(`../modules/header.ejs`); %>
+    <main>
+        <h1 class="title">Todo Chat Application.</h1>
+
+        <section id="users-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(function (user) { %>
+                        <tr id="<%= user._id %>">
+                            <td>
+                                <% if (user.avatar) { %>
+                                    <img src="./uploads/avatars/<%= user.avatar %>" />
+                                    <% } else { %>
+                                        <img src="./images/nophoto.png" />
+                                        <% } %>
+                                            <span>
+                                                <%= user.name %>
+                                            </span>
+                            </td>
+                            <td>
+                                <%= user.email %>
+                            </td>
+                            <td class="manage">
+                                <img src="./images/trash.png" alt="Delete" onclick="deleteUser('<%= user._id %>')" />
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+                <tfoot> </tfoot>
+            </table>
+        </section>
+
+    </main>
+
+    <script>
+        // console.log(users);
+
+    </script>
+    </body>
+    <%- include(`../modules/footer.ejs`); %>

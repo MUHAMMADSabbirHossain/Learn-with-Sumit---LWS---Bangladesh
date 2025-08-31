@@ -1,0 +1,123 @@
+/* css custom properties */
+:root {
+    --primary: #171c2a;
+    --secondary: #11141f;
+    --tertiary: #1f222e;
+    --dark: #0e0e12;
+    --green: #52d794;
+    --blue: #00b3bd;
+    --light: #fff;
+    --red: indianred;
+}
+
+/* common global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+/* input related styles */
+input {
+    background: var(--tertiary);
+    outline: none;
+    padding: 15px;
+    border: 1px solid var(--dark);
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 1.4rem;
+}
+
+input[type="submit"] {
+    margin: 2rem auto;
+    width: 200px;
+    background: linear-gradient(to right, var(--green), var(--blue));
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.1s ease-in-out;
+}
+
+input[type="submit"]:active {
+    transform: scale(0.99);
+}
+
+/* menu related styles */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: end;
+    align-content: center;
+    height: 40px;
+    min-width: 800px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.menu-item {
+    font-size: 14px;
+    justify-self: end;
+    padding: 0 10px;
+}
+
+.menu-item:not(:last-child) {
+    border-right: 1px solid var(--tertiary);
+}
+
+.menu a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.menu img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    border-radius: 100%;
+}
+
+/* Branding Section */
+#branding {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    grid-area: branding;
+}
+
+#branding h1 {
+    color: var(--light);
+}
+
+#branding img {
+    width: 100px;
+}
+
+/* Form Section */
+#login-form {
+    padding: 2rem;
+    grid-area: login-form;
+}
+
+#login-form form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+}

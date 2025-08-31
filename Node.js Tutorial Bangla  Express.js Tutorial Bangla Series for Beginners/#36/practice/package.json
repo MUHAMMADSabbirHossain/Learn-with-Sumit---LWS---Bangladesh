@@ -1,0 +1,24 @@
+{
+  "name": "todo-chat-application",
+  "version": "1.0.0",
+  "description": "This is a todo chat application.",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET NODE_ENV=development&&nodemon index.js",
+    "prod": "SET NODE_ENV=production&&node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo",
+    "chat",
+    "application"
+  ],
+  "author": "Muhammad Bin Ahmad",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.1"
+  }
+}
