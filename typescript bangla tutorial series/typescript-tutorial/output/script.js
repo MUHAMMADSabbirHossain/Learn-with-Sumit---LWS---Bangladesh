@@ -2,6 +2,7 @@
 
 const country = "I love Bangladesh";
 console.log(country); */
+export {};
 /* let playerName = "Mashrafi";
 let age = 35;
 
@@ -132,12 +133,53 @@ calculation(5, 6, "minus"); */
 
 const tamim = new Player("Tamim", 30, "bangladesh");
 console.log(tamim); */
-import { Player } from "./classes/player.js";
-function drawRectangle(options) {
-    let width = options.width;
-    let length = options.length;
+/* import { Player } from "./classes/player.js";
+interface RectangleOptions {
+  width: number;
+  length: number;
+  // height?: number;
+}
+function drawRectangle(options: RectangleOptions) {
+  let width = options.width;
+  let length = options.length;
 }
 // drawRectangle({ width: 10, length: 20, height: 30 });
 let threeDOptions = { width: 10, length: 20, height: 30 };
-drawRectangle(threeDOptions);
+drawRectangle(threeDOptions); */
+// Generics
+/* const addId = <
+  T extends {
+    name: string;
+    age: number;
+  }
+>(
+  obj: T
+) => {
+  let id = Math.floor(Math.random() * 100);
+  return { ...obj, id };
+};
+
+let user = addId({
+  name: "Mashrafe",
+  age: 34,
+  country: "Bangladesh",
+});
+// user.id;
+
+// let user = "Mashrafe";
+addId(user); */
+/* interface APIResponse<T> {
+  status: number;
+  type: string;
+  data: T;
+}
+
+const response1: APIResponse<object> = {
+  status: 200,
+  type: "good",
+  data: {
+    name: "Test",
+    something: 300,
+  },
+}; */
 //# sourceMappingURL=script.js.map
