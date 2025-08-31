@@ -98,4 +98,14 @@ let c: {
   isCaptain: any;
   getName: any;
 }; */
+/* const myFunc: Function | null = () => {
+  console.log("Hello World");
+};
+
+const towFunc: Function = (a: string, b: number, c?: string | number = 10) => {
+  console.log(a, b, c);
+  return a + b + c;
+};
+towFunc("string", 34);
+ */
 //# sourceMappingURL=script.js.map
