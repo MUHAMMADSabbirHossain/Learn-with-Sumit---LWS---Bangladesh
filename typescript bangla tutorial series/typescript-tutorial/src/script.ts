@@ -115,7 +115,7 @@ const towFunc: Function = (a: string, b: number, c?: string | number = 10) => {
 towFunc("string", 34);
  */
 
-type stringOrNumber = string | number;
+/* type stringOrNumber = string | number;
 type userType = { name: string; age: number };
 
 const userDetails = (id: stringOrNumber, user: userType) => {
@@ -124,4 +124,17 @@ const userDetails = (id: stringOrNumber, user: userType) => {
 
 const sayHello = (user: userType) => {
   console.log(`Hello ${user.age > 50 ? "Sir" : "Mr"} ${user.name}`);
+}; */
+
+/* let myFunc: (x: string, y: string) => void;
+myFunc = (a, b) => {
+  console.log(a, b);
 };
+
+let calculation: (x: number, y: number, z: string) => number;
+calculation = (a, b, c) => {
+  if (c === "add") return a + b;
+  else if (c === "minus") return a - b;
+  else return 0;
+};
+calculation(5, 6, "minus"); */
