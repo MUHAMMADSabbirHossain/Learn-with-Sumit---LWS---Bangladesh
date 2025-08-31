@@ -1,9 +1,7 @@
-"use strict";
 /* console.log("Hello World");
 
 const country = "I love Bangladesh";
 console.log(country); */
-Object.defineProperty(exports, "__esModule", { value: true });
 /* let playerName = "Mashrafi";
 let age = 35;
 
@@ -130,27 +128,7 @@ calculation = (a, b, c) => {
   else return 0;
 };
 calculation(5, 6, "minus"); */
-class Player {
-    name;
-    age; // Default public
-    country;
-    constructor(n, a, c) {
-        this.name = n;
-        this.age = a;
-        this.country = c;
-    }
-    play() {
-        console.log(`${this.name} from ${this.country} is playing`);
-    }
-}
-const mashrafi = new Player("Mashrafi", 35, "Bangladesh");
-mashrafi.play();
-const sakib = new Player("Sakib", 35, "Bangladesh");
-sakib.play();
-const players = [];
-players.push(mashrafi, sakib);
-console.log(players);
-// sakib.name = "Mashrafi"; // Should not do it. privite keyword helps to protect the data.
-// console.log(sakib.name);
-// console.log(sakib.country);
+import { Player } from "./classes/player.js";
+const tamim = new Player("Tamim", 30, "bangladesh");
+console.log(tamim);
 //# sourceMappingURL=script.js.map
