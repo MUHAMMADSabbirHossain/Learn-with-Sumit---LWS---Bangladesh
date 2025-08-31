@@ -181,22 +181,35 @@ const response1: APIResponse<object> = {
     something: 300,
   },
 }; */
-// enum type
-var RType;
-(function (RType) {
-    RType[RType["SUCCESS"] = 0] = "SUCCESS";
-    RType[RType["FAILURE"] = 1] = "FAILURE";
-    RType[RType["UNAUTHENTICATED"] = 2] = "UNAUTHENTICATED";
-    RType[RType["FORBIDDEN"] = 3] = "FORBIDDEN";
-})(RType || (RType = {}));
-const response1 = {
-    status: 200,
-    type: RType.SUCCESS,
-    data: {
-        name: "Test",
-        something: 300,
-    },
+/* // enum type
+
+enum RType {
+  SUCCESS,
+  FAILURE,
+  UNAUTHENTICATED,
+  FORBIDDEN,
+}
+
+interface APIResponse<T> {
+  status: number;
+  type: number;
+  data: T;
+}
+
+const response1: APIResponse<object> = {
+  status: 200,
+  type: RType.SUCCESS,
+  data: {
+    name: "Test",
+    something: 300,
+  },
 };
 console.log(response1);
+ */
+// Tuples
+let a = [3, "hello", { p: 3 }];
+a[0] = "hello";
+let b = ["hello", 3, true];
 export {};
+// b[1] = "hello"; // should not do this
 //# sourceMappingURL=script.js.map

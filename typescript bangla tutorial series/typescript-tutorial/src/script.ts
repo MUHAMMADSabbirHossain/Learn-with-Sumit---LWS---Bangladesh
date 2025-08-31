@@ -196,7 +196,7 @@ const response1: APIResponse<object> = {
   },
 }; */
 
-// enum type
+/* // enum type
 
 enum RType {
   SUCCESS,
@@ -220,3 +220,12 @@ const response1: APIResponse<object> = {
   },
 };
 console.log(response1);
+ */
+
+// Tuples
+let a = [3, "hello", { p: 3 }];
+a[0] = "hello";
+
+let b: [string, number, boolean] = ["hello", 3, true];
+
+// b[1] = "hello"; // should not do this
