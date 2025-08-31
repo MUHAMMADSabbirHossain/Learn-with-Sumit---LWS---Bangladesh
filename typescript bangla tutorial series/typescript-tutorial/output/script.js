@@ -2,7 +2,6 @@
 
 const country = "I love Bangladesh";
 console.log(country); */
-export {};
 /* let playerName = "Mashrafi";
 let age = 35;
 
@@ -182,4 +181,22 @@ const response1: APIResponse<object> = {
     something: 300,
   },
 }; */
+// enum type
+var RType;
+(function (RType) {
+    RType[RType["SUCCESS"] = 0] = "SUCCESS";
+    RType[RType["FAILURE"] = 1] = "FAILURE";
+    RType[RType["UNAUTHENTICATED"] = 2] = "UNAUTHENTICATED";
+    RType[RType["FORBIDDEN"] = 3] = "FORBIDDEN";
+})(RType || (RType = {}));
+const response1 = {
+    status: 200,
+    type: RType.SUCCESS,
+    data: {
+        name: "Test",
+        something: 300,
+    },
+};
+console.log(response1);
+export {};
 //# sourceMappingURL=script.js.map

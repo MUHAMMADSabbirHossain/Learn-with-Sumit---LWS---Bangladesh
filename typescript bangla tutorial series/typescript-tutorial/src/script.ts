@@ -195,3 +195,28 @@ const response1: APIResponse<object> = {
     something: 300,
   },
 }; */
+
+// enum type
+
+enum RType {
+  SUCCESS,
+  FAILURE,
+  UNAUTHENTICATED,
+  FORBIDDEN,
+}
+
+interface APIResponse<T> {
+  status: number;
+  type: number;
+  data: T;
+}
+
+const response1: APIResponse<object> = {
+  status: 200,
+  type: RType.SUCCESS,
+  data: {
+    name: "Test",
+    something: 300,
+  },
+};
+console.log(response1);
