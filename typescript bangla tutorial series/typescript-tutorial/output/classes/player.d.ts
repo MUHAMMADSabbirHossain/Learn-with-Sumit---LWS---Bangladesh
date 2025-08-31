@@ -1,8 +1,10 @@
-declare class Player {
-    private name;
-    age: number;
+import type { IsPlayer } from "../interfaces/isPlayer";
+declare class Player implements IsPlayer {
+    name: string;
+    private age;
     readonly country: string;
     constructor(n: string, a: number, c: string);
+    getProperty(): number;
     play(): void;
 }
 export { Player };

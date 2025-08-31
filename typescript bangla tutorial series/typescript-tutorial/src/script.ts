@@ -139,7 +139,21 @@ calculation = (a, b, c) => {
 };
 calculation(5, 6, "minus"); */
 
-import { Player } from "./classes/player.js";
+/* import { Player } from "./classes/player.js";
 
 const tamim = new Player("Tamim", 30, "bangladesh");
-console.log(tamim);
+console.log(tamim); */
+
+import { Player } from "./classes/player.js";
+interface RectangleOptions {
+  width: number;
+  length: number;
+  // height?: number;
+}
+function drawRectangle(options: RectangleOptions) {
+  let width = options.width;
+  let length = options.length;
+}
+// drawRectangle({ width: 10, length: 20, height: 30 });
+let threeDOptions = { width: 10, length: 20, height: 30 };
+drawRectangle(threeDOptions);

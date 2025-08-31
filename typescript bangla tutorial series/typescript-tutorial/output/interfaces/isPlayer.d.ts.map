@@ -1,0 +1,1 @@
+{"version":3,"file":"isPlayer.d.ts","sourceRoot":"","sources":["../../src/interfaces/isPlayer.ts"],"names":[],"mappings":"AAAA,UAAU,QAAQ;IAChB,IAAI,EAAE,MAAM,CAAC;IAEb,QAAQ,CAAC,OAAO,EAAE,MAAM,CAAC;IAEzB,WAAW,IAAI,MAAM,CAAC;IAEtB,IAAI,IAAI,IAAI,CAAC;CACd;AAED,YAAY,EAAE,QAAQ,EAAE,CAAC"}

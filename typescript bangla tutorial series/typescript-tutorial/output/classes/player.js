@@ -4,6 +4,9 @@ class Player {
         this.age = a;
         this.country = c;
     }
+    getProperty() {
+        return this.age;
+    }
     play() {
         console.log(`${this.name} from ${this.country} is playing`);
     }
@@ -18,5 +21,8 @@ console.log(players);
 // sakib.name = "Mashrafi"; // Should not do it. privite keyword helps to protect the data.
 // console.log(sakib.name);
 // console.log(sakib.country);
+let mutafiz;
+mutafiz = new Player("Mutafiz", 35, "Bangladesh");
+mutafiz.play();
 export { Player };
 //# sourceMappingURL=player.js.map
