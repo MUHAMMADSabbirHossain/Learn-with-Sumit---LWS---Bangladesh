@@ -81,4 +81,21 @@ c = {
   },
 };
  */
+/* let a: any;
+a = 34;
+a = "string";
+a = true;
+a = { name: "apple" };
+a = [1, 2, 3];
+
+let b: any[];
+b = ["string", 34, true];
+b = [1, 2, 3];
+
+let c: {
+  name: any;
+  age: any;
+  isCaptain: any;
+  getName: any;
+}; */
 //# sourceMappingURL=script.js.map
